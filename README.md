@@ -1,109 +1,34 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ayoayco/astro-reactive-library/main/.github/assets/logo/min-banner.png" alt="Astro Reactive Library Logo">
-  <br />
-  <strong>Astro Reactive Library</strong>
-  <br />
-  Let your data build your UI with native <a href="https://astro.build">Astro</a> components and architecture.
-  <br />
-  <br />
-  <a href="https://github.com/ayoayco/astro-reactive-library/actions/workflows/build-and-test.yml">
-    <img src="https://github.com/ayoayco/astro-reactive-library/actions/workflows/build-and-test.yml/badge.svg?branch=main" alt="Build & Test Result" />
-  </a>
-  <a href="https://github.com/ayoayco/astro-reactive-library">
-    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/ayoayco/astro-reactive-library?logo=github" />
-  </a>
-  <a href="https://gitpod.io/#https://github.com/ayoayco/astro-reactive-library.git">
-  <img
-    src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod"
-    alt="Contribute with Gitpod"
-  />
-  </a>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-  <br />
-  <br />
-<p>
+## Getting Started
 
-| Package | Release notes | Description |
-| --- | --- | --- |
-| [form](https://github.com/ayoayco/astro-reactive-library/blob/main/packages/form/README.md) | [![npm](https://img.shields.io/npm/v/@astro-reactive/form)](./packages/form/RELEASE.md) | a dynamic form which can be modified programmatically |
-| [validator](https://github.com/ayoayco/astro-reactive-library/blob/main/packages/validator/README.md) | [![npm](https://img.shields.io/npm/v/@astro-reactive/validator)](./packages/validator/RELEASE.md) | validators for editable fields |
-| data-grid | 🛠 | a dynamic data grid of values |
-| themes | 🛠 | easy-to-use, accessible, consistent cross-browser styles |
-| viz | 🛠 | data visualization that emits and responds to events |
+First, run the development server:
 
-# Running locally
-
-We mainly use the `demo` app to see changes we make on the packages. Do the following to start hacking:
-
-1. Fork the project then clone to your computer
-
-```
-git clone git@github.com:<your-user-name>/astro-reactive-library.git
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-2. Go into the project directory
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-cd astro-reactive-library
-```
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-3. Install the node dependencies
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-```
-npm i
-```
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-4. Run the demo application
+## Learn More
 
-```
-npm start
-```
+To learn more about Next.js, take a look at the following resources:
 
-5. Open the demo application on your browser. Browse to the address:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```
-https://localhost:3000
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-6. To run the tests:
+## Deploy on Vercel
 
-```
-npm test
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Other apps
-
-We also maintain the docs website and the project landing page in this repository. Run the following to start the dev servers:
-
-```
-npm run docs
-```
-
-```
-npm run landing-page
-```
-
-# Contributors
-
-This project is only possible because of the support and contribution of our community ❤️
-
-<a href="https://github.com/ayoayco/astro-reactive-library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ayoayco/astro-reactive-library" />
-</a>
-
-👉 _[Join our contributors!](https://github.com/ayoayco/astro-reactive-library/blob/main/CONTRIBUTING.md)_
-
-## Play around examples:
-
-  <a href="https://stackblitz.com/edit/github-ze9ebb-tthuka?file=package.json,src%2Fpages%2Findex.astro">
-    <img
-      src="https://developer.stackblitz.com/img/open_in_stackblitz_small.svg"
-      alt="Play around in Stackblitz"
-    />
-  </a>
-  <a href="https://codesandbox.io/s/astro-reactive-library-u72dgj?file=/src/pages/index.astro">
-    <img
-      src="https://img.shields.io/badge/Open%20in-CodeSandbox-040404?logo=codesandbox"
-      alt="CodeSandbox"
-    />
-  </a>
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -1,45 +1,20 @@
 {
-  "name": "astro-reactive-library",
-  "description": "Astro components for building reactive user interfaces 🚀",
-  "version": "0.0.0",
-  "repository": "https://github.com/ayoayco/astro-reactive-library",
-  "homepage": "https://ayco.io/showcase/astro-reactive-library#readme",
-  "author": {
-    "name": "Ayo Ayco",
-    "email": "ayo@ayco.io",
-    "url": "https://ayco.io"
-  },
-  "type": "module",
-  "exports": {
-    ".": "./index.ts"
-  },
+  "name": "next-basic",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "npm run dev -w apps/demo",
-    "demo": "npm run dev -w apps/demo",
-    "docs": "npm run dev -w apps/docs",
-    "landing-page": "npm run dev -w apps/landing-page",
-    "test": "npm run test --workspaces --if-present",
-    "lint": "npm run lint --workspaces --if-present",
-    "lint:fix": "npm run lint:fix --workspaces --if-present",
-    "build": "npm run build --workspaces --if-present",
-    "check": "npm run check --workspaces --if-present",
-    "test:watch": "npm run test:watch --workspaces --if-present",
-    "patch": "npm version patch -w",
-    "minor": "npm version minor -w",
-    "major": "npm version major -w",
-    "publish": "npm publish --access public -w"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "license": "ISC",
-  "workspaces": [
-    "packages/form",
-    "packages/validator",
-    "apps/demo",
-    "apps/docs",
-    "apps/landing-page",
-    "packages/common"
-  ],
   "dependencies": {
-    "astro": "^1.9.0",
-    "prettier-plugin-astro": "^0.7.0"
+    "next": "10.0.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "@netlify/ocean": "^0.3.1",
+    "eslint": "^8.23.1",
+    "eslint-config-next": "^12.3.0"
   }
 }

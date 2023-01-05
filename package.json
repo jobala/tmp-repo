@@ -39,6 +39,7 @@
     "packages/common"
   ],
   "dependencies": {
+    "astro": "^1.9.0",
     "prettier-plugin-astro": "^0.7.0"
   }
 }

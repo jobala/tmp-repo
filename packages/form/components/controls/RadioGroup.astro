@@ -1,0 +1,40 @@
+---
+/**
+ * RADIO GROUP COMPONENT
+ */
+import type { Radio, ControlOption } from '@astro-reactive/common';
+
+export interface Props {
+	control: Radio;
+	readOnly?: boolean;
+}
+
+const { control, readOnly = false } = Astro.props;
+
+const options = control.options.map((option: string | ControlOption) => {
+	if (typeof option === 'string') {
+		return {
+			label: option,
+			value: option,
+		};
+	}
+	return option;
+});
+---
+
+{
+	options.map((option: ControlOption, index: number) => (
+		<div class="radio-option">
+			<input
+				type="radio"
+				id={control.id + '-' + index}
+				name={control.name}
+				value={option.value}
+				checked={option.value === control.value}
+				readonly={readOnly || null}
+				disabled={readOnly || null}
+			/>
+			<label for={control.id + '-' + index}>{option.label}</label>
+		</div>
+	))
+}

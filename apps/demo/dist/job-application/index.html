@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Astro v1.6.5">
+    <title>Astro</title>
+  <link rel="stylesheet" href="/assets/form-component.e6c73e40.css" /><script type="module">class a{static min(t){const e="validator-min";return t!==void 0?`${e}:${t}`:e}static max(t){const e="validator-max";return t!==void 0?`${e}:${t}`:e}static get required(){return"validator-required"}static get requiredChecked(){return"validator-required:checked"}static get email(){return"validator-email"}static minLength(t){const e="validator-minlength";return t!==void 0?`${e}:${t}`:e}static maxLength(t){const e="validator-maxlength";return t!==void 0?`${e}:${t}`:e}}function u(r,t){return t.map(e=>e.replace("data-","")).map(e=>{const l=e.split(":"),i=l[0],o=l[1],n=parseInt(o||"0",10);return i===a.min()?f(r,n):i===a.max()?m(r,n):i===a.required?h(r):i===a.requiredChecked?v(r):i===a.email?g(r):i===a.minLength()?V(r,n):i===a.maxLength()?b(r,n):null}).filter(e=>e!==null)}function c(r){const t=r.target;t.parentElement?.setAttribute("data-validator-haserrors","false"),t.setAttribute("data-validator-haserrors","false")}function f(r,t){return parseInt(r,10)>=t?null:{value:r,error:"min",limit:t}}function m(r,t){return parseInt(r,10)<=t?null:{value:r,error:"max",limit:t}}function h(r){return!r?{value:r,error:"required"}:null}function v(r){return r==="checked"?null:{value:r,error:"requiredChecked"}}function g(r){return String(r).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)?null:{value:r,error:"email"}}function V(r,t){return r.length>=t?null:{value:r,error:"minLength",limit:t}}function b(r,t){return r.length<=t?null:{value:r,error:"minLength",limit:t}}const p=[...document.querySelectorAll("form input")];p?.forEach(r=>{r.addEventListener("blur",t=>{const e=t.target,i=(e?.getAttributeNames()||[]).filter(s=>s.includes("data-validator-")).map(s=>{const d=e.getAttribute(s);return`${s}:${d}`}),o=e.value;u(o,i).length?(e.parentElement?.setAttribute("data-validator-haserrors","true"),e.setAttribute("data-validator-haserrors","true"),e.classList.add("has-errors")):(e.parentElement?.removeAttribute("data-validator-haserrors"),e.removeAttribute("data-validator-haserrors"),e.classList.remove("has-errors"))}),r.addEventListener("input",c)});
+</script></head>
+  <body class="bg-gray-100 text-gray-900 tracking-wider leading-normal">
+    <nav>
+  <a href="/">Home</a> | <a href="/pizza-delivery">Pizza Delivery</a> | <a href="/job-application">Job Application</a> |
+  <a href="/examples">Docs Exaples</a>
+</nav>
+    <!-- Title -->
+    <div class="items-center mt-10">
+      <h1 class="items-center text-center font-sans font-bold break-normal text-gray-700 px-2 text-xl mt-12 lg:mt-0 md:text-5xl">
+        Programmer Job Application
+      </h1>
+    </div>
+
+    <!--Container-->
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-10 mt-4">
+      <!-- Section -->
+      <section class="w-full">
+        <!-- Header -->
+        <h2 id="section1" class="font-sans font-bold break-normal text-gray-700 px-2 pb-4 text-xl">
+          Enter your information
+        </h2>
+
+        <!-- Form -->
+        <div class="p-8 mt-6 lg:mt-0 leading-normal rounded shadow bg-slate-200">
+          <form class="light astro-UG57ON7Z" id="MwwVyPyDC" data-validator-hints="true">
+	<fieldset id="arl-fwWEOZUw6" name="Application Form">
+	<legend>Application Form</legend>
+	<div class="field">
+	<label for="arl-HvvczvFjg" data-validation-required="true" class="astro-PRGA2YOV">
+			First Name
+		</label>
+
+<input name="firstName" id="arl-HvvczvFjg" type="text" value="James" placeholder="ex. John" data-label="First Name" data-validator-haserrors="false" data-validator-required="true">
+
+
+
+
+</div><div class="field">
+	<label for="arl-uenPYtfH4" data-validation-required="true" class="astro-PRGA2YOV">
+			Last Name
+		</label>
+
+<input name="lastName" id="arl-uenPYtfH4" type="text" value="Bond" placeholder="ex. Doe" data-label="Last Name" data-validator-haserrors="false" data-validator-required="true">
+
+
+
+
+</div><div class="field">
+	<label for="arl-IpvAUugSM" data-validation-required="true" class="astro-PRGA2YOV">
+			Email
+		</label>
+
+<input name="email" id="arl-IpvAUugSM" type="text" value="james.bond@gmail.com" placeholder="ex. john.doe@email.com" data-label="Email" data-validator-haserrors="false" data-validator-email="true" data-validator-required="true">
+
+
+
+
+</div><div class="field">
+	<label for="arl-JItzktGKI" class="astro-PRGA2YOV">
+			Why should we hire you?
+		</label>
+
+<input name="whyHire" id="arl-JItzktGKI" type="text" data-label="Why should we hire you?" data-validator-haserrors="false">
+
+
+
+
+</div><div class="field">
+	<label for="arl-R3xoMCkhY" class="astro-PRGA2YOV">
+			Country of Residence
+		</label>
+
+<select name="country" id="arl-R3xoMCkhY">
+<option value="" disabled>
+			Choose Your Country
+        </option>
+<option value="U.S.A" selected="true">
+			U.S.A
+        </option><option value="Canada">
+			Canada
+        </option><option value="Mexico">
+			Mexico
+        </option><option value="Cuba">
+			Cuba
+        </option><option value="Guatamala">
+			Guatamala
+        </option><option value="Greenland">
+			Greenland
+        </option><option value="Haiti">
+			Haiti
+        </option>
+</select>
+
+
+
+
+</div><div class="field">
+	<label for="arl-XkZqL67tV" class="astro-PRGA2YOV">
+			Are you eligible to work?
+		</label>
+
+<div class="radio-option">
+			<input type="radio" id="arl-XkZqL67tV-0" name="eligible" value="yes" checked="true">
+			<label for="arl-XkZqL67tV-0">Yes</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-XkZqL67tV-1" name="eligible" value="no">
+			<label for="arl-XkZqL67tV-1">No</label>
+		</div>
+
+
+
+
+</div>
+</fieldset><fieldset id="arl-J1gpOXjTn" name="Skills">
+	<legend>Skills</legend>
+	<div class="field">
+	
+
+<input name="js" id="arl-LD9Tl98YP" type="checkbox" data-label="Javascript" data-validator-haserrors="false">
+
+<label for="arl-LD9Tl98YP" class="astro-PRGA2YOV">
+			Javascript
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="java" id="arl-RwSoye9M2" type="checkbox" data-label="Java" data-validator-haserrors="false">
+
+<label for="arl-RwSoye9M2" class="astro-PRGA2YOV">
+			Java
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="astro" id="arl-XKrgmcxNm" type="checkbox" data-label="Astro" data-validator-haserrors="false">
+
+<label for="arl-XKrgmcxNm" class="astro-PRGA2YOV">
+			Astro
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="cpp" id="arl-5rhzL5rge" type="checkbox" data-label="C/C++" data-validator-haserrors="false">
+
+<label for="arl-5rhzL5rge" class="astro-PRGA2YOV">
+			C/C++
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="sql" id="arl-f65RAJNoM" type="checkbox" data-label="SQL" data-validator-haserrors="false">
+
+<label for="arl-f65RAJNoM" class="astro-PRGA2YOV">
+			SQL
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="devops" id="arl-zEv6cplL1" type="checkbox" data-label="DevOps" data-validator-haserrors="false">
+
+<label for="arl-zEv6cplL1" class="astro-PRGA2YOV">
+			DevOps
+		</label>
+
+
+</div><div class="field">
+	<label for="arl-be5CM70qe" class="astro-PRGA2YOV">
+			Upload Resume
+		</label>
+
+<input name="resume" id="arl-be5CM70qe" type="file" data-label="Upload Resume" data-validator-haserrors="false">
+
+
+
+
+</div>
+</fieldset>
+	<div class="field">
+	
+
+<input name="submit" id="arl-DJeJ13JDX" type="submit" data-label="" data-validator-haserrors="false">
+
+
+
+
+</div>
+</form>
+
+
+
+
+        </div>
+      </section>
+    </div>
+  </body></html>

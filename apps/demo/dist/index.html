@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="dark astro-CE46SWI3">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Astro v1.6.5">
+    <title>Astro</title>
+  <link rel="stylesheet" href="/assets/form-component.e6c73e40.css" />
+<link rel="stylesheet" href="/assets/index.96d1adf8.css" /><script type="module">class a{static min(t){const e="validator-min";return t!==void 0?`${e}:${t}`:e}static max(t){const e="validator-max";return t!==void 0?`${e}:${t}`:e}static get required(){return"validator-required"}static get requiredChecked(){return"validator-required:checked"}static get email(){return"validator-email"}static minLength(t){const e="validator-minlength";return t!==void 0?`${e}:${t}`:e}static maxLength(t){const e="validator-maxlength";return t!==void 0?`${e}:${t}`:e}}function u(r,t){return t.map(e=>e.replace("data-","")).map(e=>{const l=e.split(":"),i=l[0],o=l[1],n=parseInt(o||"0",10);return i===a.min()?f(r,n):i===a.max()?m(r,n):i===a.required?h(r):i===a.requiredChecked?v(r):i===a.email?g(r):i===a.minLength()?V(r,n):i===a.maxLength()?b(r,n):null}).filter(e=>e!==null)}function c(r){const t=r.target;t.parentElement?.setAttribute("data-validator-haserrors","false"),t.setAttribute("data-validator-haserrors","false")}function f(r,t){return parseInt(r,10)>=t?null:{value:r,error:"min",limit:t}}function m(r,t){return parseInt(r,10)<=t?null:{value:r,error:"max",limit:t}}function h(r){return!r?{value:r,error:"required"}:null}function v(r){return r==="checked"?null:{value:r,error:"requiredChecked"}}function g(r){return String(r).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)?null:{value:r,error:"email"}}function V(r,t){return r.length>=t?null:{value:r,error:"minLength",limit:t}}function b(r,t){return r.length<=t?null:{value:r,error:"minLength",limit:t}}const p=[...document.querySelectorAll("form input")];p?.forEach(r=>{r.addEventListener("blur",t=>{const e=t.target,i=(e?.getAttributeNames()||[]).filter(s=>s.includes("data-validator-")).map(s=>{const d=e.getAttribute(s);return`${s}:${d}`}),o=e.value;u(o,i).length?(e.parentElement?.setAttribute("data-validator-haserrors","true"),e.setAttribute("data-validator-haserrors","true"),e.classList.add("has-errors")):(e.parentElement?.removeAttribute("data-validator-haserrors"),e.removeAttribute("data-validator-haserrors"),e.classList.remove("has-errors"))}),r.addEventListener("input",c)});
+</script></head>
+  <body class="dark astro-CE46SWI3">
+    <nav>
+  <a href="/">Home</a> | <a href="/pizza-delivery">Pizza Delivery</a> | <a href="/job-application">Job Application</a> |
+  <a href="/examples">Docs Exaples</a>
+</nav>
+    <h1 class="astro-CE46SWI3">Astro Reactive Form</h1>
+    <form class="dark astro-UG57ON7Z" name="Simple Form" id="arl-h5Ivg8JYF" data-validator-hints="true">
+	<div class="field">
+	<label for="arl-gFfKG7Yf5" data-validation-required="true" class="astro-PRGA2YOV">
+			Username
+		</label>
+
+<input name="username" id="arl-gFfKG7Yf5" type="text" value="RAMOOOON" data-label="Username" data-validator-haserrors="false" data-validator-required="true">
+
+
+
+
+</div><div class="field">
+	<label for="arl-QCO21Aws5" data-validation-required="true" class="astro-PRGA2YOV">
+			Email
+		</label>
+
+<input name="email" id="arl-QCO21Aws5" type="text" value="invalid-email" data-label="Email" data-validator-haserrors="false" data-validator-email="true" data-validator-required="true">
+
+
+
+
+</div><div class="field">
+	<label for="arl-3HgUCHfwF" data-validation-required="true" class="astro-PRGA2YOV">
+			Password
+		</label>
+
+<input name="password" id="arl-3HgUCHfwF" type="password" data-label="Password" data-validator-haserrors="false" data-validator-required="true" data-validator-minlength="8">
+
+
+
+
+</div><div class="field">
+	<label for="arl-27GI2ltFM" class="astro-PRGA2YOV">
+			Rating
+		</label>
+
+<div class="radio-option">
+			<input type="radio" id="arl-27GI2ltFM-0" name="rating" value="1">
+			<label for="arl-27GI2ltFM-0">1</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-27GI2ltFM-1" name="rating" value="2">
+			<label for="arl-27GI2ltFM-1">2</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-27GI2ltFM-2" name="rating" value="3">
+			<label for="arl-27GI2ltFM-2">3</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-27GI2ltFM-3" name="rating" value="4">
+			<label for="arl-27GI2ltFM-3">4</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-27GI2ltFM-4" name="rating" value="5" checked="true">
+			<label for="arl-27GI2ltFM-4">5</label>
+		</div>
+
+
+
+
+</div><div class="field">
+	<label for="arl-zA31FgzwT" class="astro-PRGA2YOV">
+			Agreement
+		</label>
+
+<div class="radio-option">
+			<input type="radio" id="arl-zA31FgzwT-0" name="agreement" value="yes" checked="true">
+			<label for="arl-zA31FgzwT-0">Agree</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-zA31FgzwT-1" name="agreement" value="no">
+			<label for="arl-zA31FgzwT-1">Disagree</label>
+		</div>
+
+
+
+
+</div><div class="field">
+	<label for="arl-1GIZoKobZ" class="astro-PRGA2YOV">
+			Size
+		</label>
+
+<select name="size" id="arl-1GIZoKobZ">
+<option value="" disabled selected="true">
+			-- Please choose an option --
+        </option>
+<option value="S">
+			S
+        </option><option value="M">
+			M
+        </option><option value="L">
+			L
+        </option><option value="XL">
+			XL
+        </option><option value="XXL">
+			XXL
+        </option>
+</select>
+
+
+
+
+</div><div class="field">
+	<label for="arl-t06eeVFFR" class="astro-PRGA2YOV">
+			Feedback
+		</label>
+
+<textarea name="comment" id="arl-t06eeVFFR" rows="3" cols="21" data-label="Feedback">Nice!
+</textarea>
+
+
+
+
+</div><div class="field">
+	
+
+<input name="is-awesome" id="arl-9IbC8q20I" type="checkbox" value="checked" checked="true" data-label="is Awesome?" data-validator-haserrors="false">
+
+<label for="arl-9IbC8q20I" class="astro-PRGA2YOV">
+			is Awesome?
+		</label>
+
+
+</div>
+	
+</form>
+
+
+
+
+    
+  </body>
+</html>

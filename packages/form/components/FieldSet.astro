@@ -1,0 +1,21 @@
+---
+import type { FormGroup } from '../core/form-group';
+import Field from './Field.astro';
+
+export interface Props {
+	group: FormGroup;
+	showValidationHints: boolean;
+	readOnly?: boolean;
+}
+
+const { group, showValidationHints, readOnly = false } = Astro.props;
+---
+
+<fieldset id={group.id} name={group.name}>
+	{group.name && <legend>{group.name}</legend>}
+	{
+		group?.controls?.map((control) => (
+			<Field showValidationHints={showValidationHints} control={control} readOnly={readOnly} />
+		))
+	}
+</fieldset>

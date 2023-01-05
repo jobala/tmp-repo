@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Astro v1.6.5">
+    <title>Astro</title>
+  <link rel="stylesheet" href="/assets/form-component.e6c73e40.css" /><script type="module">class a{static min(t){const e="validator-min";return t!==void 0?`${e}:${t}`:e}static max(t){const e="validator-max";return t!==void 0?`${e}:${t}`:e}static get required(){return"validator-required"}static get requiredChecked(){return"validator-required:checked"}static get email(){return"validator-email"}static minLength(t){const e="validator-minlength";return t!==void 0?`${e}:${t}`:e}static maxLength(t){const e="validator-maxlength";return t!==void 0?`${e}:${t}`:e}}function u(r,t){return t.map(e=>e.replace("data-","")).map(e=>{const l=e.split(":"),i=l[0],o=l[1],n=parseInt(o||"0",10);return i===a.min()?f(r,n):i===a.max()?m(r,n):i===a.required?h(r):i===a.requiredChecked?v(r):i===a.email?g(r):i===a.minLength()?V(r,n):i===a.maxLength()?b(r,n):null}).filter(e=>e!==null)}function c(r){const t=r.target;t.parentElement?.setAttribute("data-validator-haserrors","false"),t.setAttribute("data-validator-haserrors","false")}function f(r,t){return parseInt(r,10)>=t?null:{value:r,error:"min",limit:t}}function m(r,t){return parseInt(r,10)<=t?null:{value:r,error:"max",limit:t}}function h(r){return!r?{value:r,error:"required"}:null}function v(r){return r==="checked"?null:{value:r,error:"requiredChecked"}}function g(r){return String(r).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)?null:{value:r,error:"email"}}function V(r,t){return r.length>=t?null:{value:r,error:"minLength",limit:t}}function b(r,t){return r.length<=t?null:{value:r,error:"minLength",limit:t}}const p=[...document.querySelectorAll("form input")];p?.forEach(r=>{r.addEventListener("blur",t=>{const e=t.target,i=(e?.getAttributeNames()||[]).filter(s=>s.includes("data-validator-")).map(s=>{const d=e.getAttribute(s);return`${s}:${d}`}),o=e.value;u(o,i).length?(e.parentElement?.setAttribute("data-validator-haserrors","true"),e.setAttribute("data-validator-haserrors","true"),e.classList.add("has-errors")):(e.parentElement?.removeAttribute("data-validator-haserrors"),e.removeAttribute("data-validator-haserrors"),e.classList.remove("has-errors"))}),r.addEventListener("input",c)});
+</script></head>
+  <body>
+    <nav>
+  <a href="/">Home</a> | <a href="/pizza-delivery">Pizza Delivery</a> | <a href="/job-application">Job Application</a> |
+  <a href="/examples">Docs Exaples</a>
+</nav>
+    <h1>Pizza Form Demo</h1>
+    <form class="light astro-UG57ON7Z" id="0i9U3y4OE" data-validator-hints="true">
+	<fieldset id="arl-o1FyGHFeP" name="Base">
+	<legend>Base</legend>
+	<div class="field">
+	<label for="arl-NnHmAeTiC" class="astro-PRGA2YOV">
+			Crust
+		</label>
+
+<div class="radio-option">
+			<input type="radio" id="arl-NnHmAeTiC-0" name="crust" value="garlic">
+			<label for="arl-NnHmAeTiC-0">Garlic</label>
+		</div>
+
+
+
+
+</div><div class="field">
+	<label for="arl-MVbPH12lk" class="astro-PRGA2YOV">
+			Size
+		</label>
+
+<div class="radio-option">
+			<input type="radio" id="arl-MVbPH12lk-0" name="size" value="Small">
+			<label for="arl-MVbPH12lk-0">Small</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-MVbPH12lk-1" name="size" value="Medium">
+			<label for="arl-MVbPH12lk-1">Medium</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-MVbPH12lk-2" name="size" value="Large">
+			<label for="arl-MVbPH12lk-2">Large</label>
+		</div>
+
+
+
+
+</div><div class="field">
+	<label for="arl-ltj61jVBO" class="astro-PRGA2YOV">
+			Sauce
+		</label>
+
+<div class="radio-option">
+			<input type="radio" id="arl-ltj61jVBO-0" name="sauce" value="Tomato">
+			<label for="arl-ltj61jVBO-0">Tomato</label>
+		</div><div class="radio-option">
+			<input type="radio" id="arl-ltj61jVBO-1" name="sauce" value="Barbeque">
+			<label for="arl-ltj61jVBO-1">Barbeque</label>
+		</div>
+
+
+
+
+</div>
+</fieldset><fieldset id="arl-vYtiPxik8" name="Toppings">
+	<legend>Toppings</legend>
+	<div class="field">
+	
+
+<input name="mushrooms" id="arl-HuuTKwoIV" type="checkbox" data-label="Mushrooms" data-validator-haserrors="false">
+
+<label for="arl-HuuTKwoIV" class="astro-PRGA2YOV">
+			Mushrooms
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="extraCheese" id="arl-4VnJ0lMXy" type="checkbox" data-label="Extra Cheese" data-validator-haserrors="false">
+
+<label for="arl-4VnJ0lMXy" class="astro-PRGA2YOV">
+			Extra Cheese
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="onions" id="arl-XWgNEt0TM" type="checkbox" data-label="Onions" data-validator-haserrors="false">
+
+<label for="arl-XWgNEt0TM" class="astro-PRGA2YOV">
+			Onions
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="peppers" id="arl-hC3gO0UQY" type="checkbox" data-label="Peppers" data-validator-haserrors="false">
+
+<label for="arl-hC3gO0UQY" class="astro-PRGA2YOV">
+			Peppers
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="pepperoni" id="arl-p1aTGbwRk" type="checkbox" data-label="Pepperoni" data-validator-haserrors="false">
+
+<label for="arl-p1aTGbwRk" class="astro-PRGA2YOV">
+			Pepperoni
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="sausage" id="arl-26wGF1mpH" type="checkbox" data-label="Sausage" data-validator-haserrors="false">
+
+<label for="arl-26wGF1mpH" class="astro-PRGA2YOV">
+			Sausage
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="chicken" id="arl-PRoQJSjqA" type="checkbox" data-label="Chicken" data-validator-haserrors="false">
+
+<label for="arl-PRoQJSjqA" class="astro-PRGA2YOV">
+			Chicken
+		</label>
+
+
+</div><div class="field">
+	
+
+<input name="pineapple" id="arl-gIcz7fMKu" type="checkbox" data-label="Pineapple" data-validator-haserrors="false">
+
+<label for="arl-gIcz7fMKu" class="astro-PRGA2YOV">
+			Pineapple
+		</label>
+
+
+</div>
+</fieldset><fieldset id="arl-BGSRpsc0h" name="Customer Info">
+	<legend>Customer Info</legend>
+	<div class="field" data-validator-haserrors="true">
+	<label for="arl-AkOvISmiK" data-validation-required="true" class="astro-PRGA2YOV">
+			Name
+		</label>
+
+<input name="name" id="arl-AkOvISmiK" type="text" data-label="Name" data-validator-haserrors="true" data-validator-required="true">
+
+
+
+
+</div><div class="field" data-validator-haserrors="true">
+	<label for="arl-2pOxxjboO" data-validation-required="true" class="astro-PRGA2YOV">
+			Delivery Address
+		</label>
+
+<input name="address" id="arl-2pOxxjboO" type="text" data-label="Delivery Address" data-validator-haserrors="true" data-validator-required="true">
+
+
+
+
+</div><div class="field" data-validator-haserrors="true">
+	<label for="arl-uAOerJdhn" class="astro-PRGA2YOV">
+			Contact Number
+		</label>
+
+<input name="contact" id="arl-uAOerJdhn" type="text" data-label="Contact Number" data-validator-haserrors="true" data-validator-minlength="9">
+
+
+
+
+</div>
+</fieldset>
+	
+</form>
+
+
+
+
+  </body></html>

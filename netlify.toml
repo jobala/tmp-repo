@@ -1,2 +1,2 @@
 [[plugins]]
-package="plugins/netlify-plugin-proxy-redirect"
+package="./plugins/netlify-plugin-proxy-redirect"

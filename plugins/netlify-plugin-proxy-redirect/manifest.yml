@@ -1,0 +1,14 @@
+name: netlify-plugin-proxy-redirect
+inputs:
+  - name: locales
+    required: false
+    description: List of locales to apply the redirects to (EU locales)
+    default: de-de,en-gb,en-pl,el-gr,es-es,fr-fr,it-it,pl-pl,ro-ro,tr-tr
+  - name: base_host
+    required: false
+    description: The base host name for the proxy? Do not include protocol, https is automatically added
+    default: cool-netlify-app-here-eu.netlify.app
+  - name: ignore_site_id
+    required: false
+    description: The Netlify site ID for the EU site (as we do not want to run this plugin on the EU site)
+    default: abc123-123

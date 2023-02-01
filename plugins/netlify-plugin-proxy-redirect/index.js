@@ -9,21 +9,15 @@ module.exports = {
       const localesStr = inputs.locales || "";
       const localesArr = localesStr.split(",").map((item) => item.trim()); // split string by comma and strip spaces
       const baseHost = inputs.base_host;
-      // for (const locale of localesArr) {
-      //   console.log(`Adding rewrite proxy to https://${getRewriteHostPrefix()}${baseHost}/${locale}/:splat`);
-      //   netlifyConfig.redirects.push({
-      //     from: `/${locale}/*`,
-      //     to: `https://${getRewriteHostPrefix()}${baseHost}/${locale}/:splat`,
-      //     status: 200,
-      //     force: true,
-      //   });
-      // }
-      netlifyConfig.redirects.push({
-        from: "/",
-        to: "https://petsofnetlify.com",
-        status: 200,
-        force: true,
-      })
+      for (const locale of localesArr) {
+        console.log(`Adding rewrite proxy to https://${getRewriteHostPrefix()}${baseHost}/${locale}/:splat`);
+        netlifyConfig.redirects.push({
+          from: `/${locale}/*`,
+          to: `https://${getRewriteHostPrefix()}${baseHost}/${locale}/:splat`,
+          status: 200,
+          force: true,
+        });
+      }
     } catch (err) {
       utils.build.failBuild("Error processing EU proxy redirects:", { error: String(err) });
     }

@@ -7,7 +7,7 @@ inputs:
   - name: base_host
     required: false
     description: The base host name for the proxy? Do not include protocol, https is automatically added
-    default: cool-netlify-app-here-eu.netlify.app
+    default: incredible-granita-3f657d.netlify.app
   - name: ignore_site_id
     required: false
     description: The Netlify site ID for the EU site (as we do not want to run this plugin on the EU site)

@@ -12,7 +12,7 @@ module.exports = {
       for (const locale of localesArr) {
         console.log(`Adding rewrite proxy to https://${getRewriteHostPrefix()}${baseHost}/${locale}/:splat`);
         netlifyConfig.redirects.push({
-          from: `/${locale}/*`,
+          from: `/`,
           to: `https://${getRewriteHostPrefix()}${baseHost}/${locale}/:splat`,
           status: 200,
           force: true,
